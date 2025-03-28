@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { SendHorizontal, Loader2, Square } from "lucide-react";
+import Image from "next/image";
 
 type Message = {
   role: "user" | "assistant";
@@ -104,7 +105,7 @@ export function Chat() {
         {/* Bot Header with Online/Typing Indicator */}
         <div className="flex items-center justify-between bg-muted p-3 border-b  border-border/30">
           <div className="flex items-center gap-2">
-            <img
+            <Image
               src="/bot-avatar.avif"
               alt="Bot"
               className="w-8 h-8 rounded-full"
