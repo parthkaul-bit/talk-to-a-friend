@@ -20,6 +20,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata: Metadata = {
+  title: "Talk to a friend",
+  description: "An AI chatbot that talks to you like a friend",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
