@@ -2,6 +2,15 @@
 
 *{
     font-family: 'Geist', ' sans-serif';
-
-    /* remove scrollbar */
 }
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* For IE and Edge */
+  }
+  
