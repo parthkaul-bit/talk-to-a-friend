@@ -3,7 +3,7 @@ import { NextRequest } from 'next/server';
 
 export default clerkMiddleware((auth, req: NextRequest) => {
   // If the user is signed in and trying to access the home page, redirect to chat
-  // @ts-expect-error
+  // @ts-expect-error: Type mismatch issue, needs manual handling
 if (auth.userId && req.nextUrl.pathname === "/") {
     return Response.redirect(new URL("/chat", req.url));
   }
