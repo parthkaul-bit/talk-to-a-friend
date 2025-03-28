@@ -8,8 +8,8 @@ const Footer = () => {
       <p className="px-4">
         <strong>Disclaimer:</strong> Talk to a Friend is an AI-based companion
         for emotional support. It is not a substitute for professional mental
-        health services. If you're struggling, please seek help from a licensed
-        professional.
+        health services. If you&apos;s re struggling, please seek help from a
+        licensed professional.
       </p>
     </footer>
   );

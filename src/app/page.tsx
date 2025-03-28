@@ -1,3 +1,8 @@
+// todo: footer - user input
+// todo: different personas - add in chat
+// todo: add avatars in chat
+// todo: better ux
+
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
@@ -59,5 +64,3 @@ export default function Home() {
     </>
   );
 }
-
-// todo: footer - please seek professional help
