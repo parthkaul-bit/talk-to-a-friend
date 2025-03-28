@@ -59,3 +59,5 @@ export default function Home() {
     </>
   );
 }
+
+// todo: footer - please seek professional help
