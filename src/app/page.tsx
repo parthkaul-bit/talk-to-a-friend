@@ -20,7 +20,7 @@ export default function Home() {
         />
       </Head>
 
-      <div className="min-h-svh overflow-hidden bg-gradient-to-br from-blue-50 to-purple-100 flex flex-col justify-center items-center p-4 overflow-hidden relative bg-[url('/dots.svg')] bg-cover">
+      <div className="min-h-svh overflow-hidden bg-gradient-to-br from-blue-50 to-purple-100 flex flex-col justify-center items-center p-4 relative bg-[url('/dots.svg')] bg-cover">
         <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
           {/* Animated Elements Near the Text */}
           <div className="relative flex justify-center items-center w-full">

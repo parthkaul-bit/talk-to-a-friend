@@ -3,8 +3,8 @@ import { NextRequest } from 'next/server';
 
 export default clerkMiddleware((auth, req: NextRequest) => {
   // If the user is signed in and trying to access the home page, redirect to chat
-  //@ts-ignore
-  if (auth.userId && req.nextUrl.pathname === "/") {
+  // @ts-expect-error
+if (auth.userId && req.nextUrl.pathname === "/") {
     return Response.redirect(new URL("/chat", req.url));
   }
 });

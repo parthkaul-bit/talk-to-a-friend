@@ -27,7 +27,7 @@ export function Chat() {
     setInput("");
     setIsLoading(true);
 
-    let assistantMessage: Message = { role: "assistant", content: "" };
+    const assistantMessage: Message = { role: "assistant", content: "" };
     setMessages((prev) => [...prev, assistantMessage]);
 
     const newController = new AbortController();
