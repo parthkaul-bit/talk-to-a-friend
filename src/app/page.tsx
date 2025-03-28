@@ -1,8 +1,12 @@
-// todo: footer - user input
+// **done: fix footer**
+// **done: add avatars in chat**
+// ** done: name of my bot and online & typing
 // todo: different personas - add in chat
-// todo: add avatars in chat
+// todo: remove auth
+// todo: user onboarding
+// todo: chat background
 // todo: better ux
-
+// todo: privacy policy
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
