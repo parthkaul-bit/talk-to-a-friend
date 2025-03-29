@@ -14,9 +14,9 @@ const Modal = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.9 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 flex items-center justify-center bg-black/50"
+          className="fixed inset-0 flex items-center justify-center bg-black/50 px-4"
         >
-          <div className="relative bg-gray-100 text-gray-700 text-sm rounded-lg shadow-lg p-6 max-w-md w-full">
+          <div className="relative bg-gray-100 text-gray-700 text-sm rounded-lg shadow-lg p-4 sm:p-6 max-w-md w-full sm:w-4/5 md:w-2/3 lg:w-1/3">
             {/* Close Button in Top Right */}
             <button
               onClick={() => setIsVisible(false)}
@@ -25,13 +25,11 @@ const Modal = () => {
               <X />
             </button>
 
-            <h2 className="text-lg font-semibold text-center">
-              Disclaimer
-            </h2>
-            <p className="mt-2 text-xs md:text-sm text-center">
+            <h2 className="text-lg font-semibold text-center">Disclaimer</h2>
+            <p className="mt-2 text-xs sm:text-sm text-center">
               <strong>Talk to a Friend</strong> is an AI-based companion for emotional support. It is not a substitute for professional mental health services. If you&apos;re struggling, please seek help from a licensed professional.
             </p>
-            <p className="mt-2 text-xs md:text-sm text-center font-medium">
+            <p className="mt-2 text-xs sm:text-sm text-center font-medium">
               Your chats are private and anonymous. 🛡️
             </p>
           </div>
