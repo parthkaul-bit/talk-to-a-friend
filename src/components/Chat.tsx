@@ -100,7 +100,7 @@ export function Chat() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen w-full">
+    <div className="flex items-center justify-center h-full w-full">
       <Card className="w-full max-w-2xl flex flex-col h-[90vh]">
         {/* Bot Header with Online/Typing Indicator */}
         <div className="flex items-center justify-between bg-muted p-3 border-b  border-border/30">
@@ -168,14 +168,15 @@ export function Chat() {
           onSubmit={handleSubmit}
           className="sticky bottom-0 bg-background z-10 p-4 flex items-center gap-2"
         >
-          <Input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Type your message..."
-            disabled={isLoading}
-            className="flex-1 h-12 px-4 text-base"
-          />
+<Input
+  type="text"
+  value={input}
+  onChange={(e) => setInput(e.target.value)}
+  placeholder="Type your message..."
+  disabled={isLoading}
+  className="flex-1 w-full h-14 sm:h-16 px-4 sm:px-6 text-base sm:text-lg rounded-full border border-gray-300 transition-all duration-200"
+/>
+
           <Button
             type="submit"
             disabled={isLoading || input.trim() === ""}
