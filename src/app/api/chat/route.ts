@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { auth } from "@clerk/nextjs/server";
+// import { auth } from "@clerk/nextjs/server";
 import Groq from "groq-sdk";
 import { SYSTEM_PROMPT } from "@/prompts";
 
@@ -9,10 +9,10 @@ const groq = new Groq({
 
 export async function POST(req: Request) {
   try {
-    const session = await auth();
-    if (!session?.userId) {
-      return new NextResponse("Unauthorized", { status: 401 });
-    }
+    // const session = await auth();
+    // if (!session?.userId) {
+    //   return new NextResponse("Unauthorized", { status: 401 });
+    // }
 
     const { message } = await req.json();
 
