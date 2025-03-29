@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
@@ -30,7 +29,7 @@ const Modal = () => {
               Disclaimer
             </h2>
             <p className="mt-2 text-xs md:text-sm text-center">
-              <strong>Talk to a Friend</strong> is an AI-based companion for emotional support. It is not a substitute for professional mental health services. If you're struggling, please seek help from a licensed professional.
+              <strong>Talk to a Friend</strong> is an AI-based companion for emotional support. It is not a substitute for professional mental health services. If you&apos;re struggling, please seek help from a licensed professional.
             </p>
             <p className="mt-2 text-xs md:text-sm text-center font-medium">
               Your chats are private and anonymous. 🛡️
