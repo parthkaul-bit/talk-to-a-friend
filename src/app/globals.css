@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
-*{
-    font-family: 'Geist', ' sans-serif';
+body {
+  font-family: 'Inter', sans-serif;
 }
 
 /* Hide scrollbar */
 ::-webkit-scrollbar {
-    display: none;
-  }
-  
-  html, body {
-    scrollbar-width: none;
-    -ms-overflow-style: none; /* For IE and Edge */
-  }
-  
+  display: none;
+}
+
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* For IE and Edge */
+}

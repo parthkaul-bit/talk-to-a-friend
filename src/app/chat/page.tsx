@@ -1,6 +1,6 @@
 import { auth } from "@clerk/nextjs/server";
 import { Chat } from "@/components/Chat";
-import Footer from "@/components/Footer";
+import Modal from "@/components/Modal";
 
 export default async function ChatPage() {
   const { userId, redirectToSignIn } = await auth();
@@ -14,7 +14,7 @@ export default async function ChatPage() {
       <main className="w-full max-w-4xl flex-1 flex items-center justify-center">
         <Chat />
       </main>
-      <Footer />
+      <Modal />
     </div>
   );
 }

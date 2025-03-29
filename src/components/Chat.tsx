@@ -108,6 +108,8 @@ export function Chat() {
             <Image
               src="/bot-avatar.avif"
               alt="Bot"
+              width={32} // Adjust as needed
+              height={32}
               className="w-8 h-8 rounded-full"
             />
             <div>
@@ -143,7 +145,7 @@ export function Chat() {
                 className={`max-w-[80%] rounded-xl p-3 shadow-sm ${
                   message.role === "user"
                     ? "bg-primary text-primary-foreground"
-                    : "bg-muted text-muted-foreground"
+                    : "bg-[#226468] text-white"
                 }`}
               >
                 {message.content}

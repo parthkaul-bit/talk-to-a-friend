@@ -1,70 +1,65 @@
-// **done: fix footer**
-// **done: add avatars in chat**
-// ** done: name of my bot and online & typing
-// todo: different personas - add in chat
-// todo: remove auth
-// todo: user onboarding
-// todo: chat background
-// todo: better ux
-// todo: privacy policy
 "use client";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
-import Head from "next/head";
+import { jost } from "@/lib/fonts";
+
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Talk to a Friend - Your AI Listener</title>
-        <meta
-          name="description"
-          content="A caring AI friend who listens, understands, and supports you—whenever you need to talk."
-        />
-        <meta
-          name="keywords"
-          content="AI friend, talk to AI, emotional support, AI chat companion, feel heard"
-        />
-      </Head>
-
-      <div className="min-h-svh overflow-hidden bg-gradient-to-br from-blue-50 to-purple-100 flex flex-col justify-center items-center p-4 relative bg-[url('/dots.svg')] bg-cover">
-        <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
-          {/* Animated Elements Near the Text */}
-          <div className="relative flex justify-center items-center w-full">
-            <motion.div className="w-10 h-10 md:w-16 md:h-16 bg-purple-700 rounded-full opacity-30 blur-xl animate-bounce absolute -top-6 left-10 md:left-20" />
-            <motion.div className="w-16 h-16 md:w-24 md:h-24 bg-blue-800 rounded-full opacity-30 blur-xl animate-pulse absolute -bottom-12 right-10 md:right-10" />
-          </div>
-
-          <motion.h1
-            className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight relative"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Feeling Overwhelmed? <br />
-            <span className="text-purple-400">Talk to a Friend</span>
-          </motion.h1>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6, type: "spring" }}
-            className="flex flex-col sm:flex-row justify-center items-center gap-4"
-          >
-            <Link href="/chat" className="w-full sm:w-auto">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto bg-purple-500 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-purple-600 transition-colors flex items-center justify-center gap-3"
-              >
-                Start Talking <MessageCircle className="ml-2" size={24} />
-              </motion.button>
-            </Link>
-          </motion.div>
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-start text-center px-6 pt-24 sm:pt-32">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 -z-10">
+        <div className="relative w-full h-full">
+          <Image
+            src="/hero-illustration2.jpg"
+            alt="Background"
+            fill
+            className="object-cover object-center"
+            quality={100}
+            priority
+          />
+          {/* Overlay for better readability while keeping original theme */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-white/20 to-white/10"></div>
         </div>
       </div>
-    </>
+
+      {/* Content */}
+      <motion.div
+        className="max-w-2xl px-4"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <h1 className={`${jost.className} text-4xl sm:text-5xl font-extrabold text-[#07383C]`}>
+          GENTLE AS SUNLIGHT,
+          <br />
+          DEEP AS ROOTS
+        </h1>
+        <p className="mt-4 text-lg sm:text-2xl font-medium text-[#07383C]">
+          Unload, breathe, and find peace with an AI friend <br />
+          who listens without judgment.
+        </p>
+
+        {/* Animated Button */}
+        <motion.div
+          className="mt-6"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          <Link href="/chat">
+            <motion.button
+              className="rounded-2xl py-3 sm:py-4 px-6 sm:px-8 bg-[#226468] text-white text-lg font-bold transition"
+              animate={{ scale: [1, 1.15, 1] }}
+              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            >
+              LET&apos;S CHAT!
+            </motion.button>
+          </Link>
+        </motion.div>
+      </motion.div>
+    </section>
   );
 }
